@@ -1,0 +1,172 @@
+##################################
+##          CODING ISP          ##
+##################################
+
+#STORYLINE & INSTRUCTIONS
+inFile = open("ISP1.txt", "r")
+preview = inFile.read().rstrip("\n")
+print(preview)
+inFile.close()
+
+input(" ")
+
+running = True
+
+#SCENARIO 1
+while running == True:
+    inFile = open("ISP2.txt", "r")
+    preview2 = inFile.read().rstrip("\n")
+    print(preview2)
+    inFile.close()
+
+    print()
+
+    #OPTIONS FOR SCENARIO 1
+    option = input('')
+    if option == '1':
+        inFile = open("ISPO1.txt", "r")
+        preview3 = inFile.read().rstrip("\n")
+        print(preview3)
+        inFile.close()
+        print('(PRESS ENTER TO CONTINUE...)')
+        input(" ")
+        running = False
+
+    elif option == '2':
+        inFile = open("ISPO2.txt", "r")
+        preview4 = inFile.read().rstrip("\n")
+        print(preview4)
+        inFile.close()
+        print('(PRESS ENTER TO CONTINUE...)')
+        input(" ")
+        running = False
+
+    elif option == '3':
+        inFile = open("ISPO3.txt", "r")
+        preview5 = inFile.read().rstrip("\n")
+        print(preview5)
+        inFile.close()
+        print('(PRESS ENTER TO CONTINUE...)')
+        input(" ")
+        running = False
+        
+    else:
+        print("This option is not viable. Please try again.")
+
+input(' ')
+
+#SCENARIO 2
+
+inFile = open('ISPF2.txt', 'r')
+lines = inFile.readlines()
+linesr = 16
+
+for line in lines[:linesr]:
+    print(line.strip())
+
+inFile.close()
+
+option1 = input(' ')
+
+running1 = True
+
+while running1 == True:
+    if option1 == '1':
+        inFile = open('ISPF2.txt', 'r')
+        lines = inFile.readlines()
+
+        for line in lines[16:28]:  
+            print(line.strip())
+
+        print('(PRESS ENTER TO CONTINUE...)')
+        inFile.close()
+        running1 = False
+
+    elif option1 == '2':
+        inFile = open('ISPF2.txt', 'r')
+        lines = inFile.readlines()
+
+        for line in lines[29:40]:  
+            print(line.strip())
+
+        print('(PRESS ENTER TO CONTINUE...)')
+        inFile.close()
+        running1 = False
+
+    elif option1 == '3':
+        inFile = open('ISPF2.txt', 'r')
+        lines = inFile.readlines()
+
+        for line in lines[40:53]:  
+            print(line.strip())
+
+        print('(PRESS ENTER TO CONTINUE...)')
+        inFile.close()
+        running1 = False
+
+    else:
+        print("This option is not viable. Please try again.")
+
+input()
+
+#EVENT
+
+def script(x,y):
+    inFile = open('ISPF2.txt', 'r')
+    lines = inFile.readlines()
+
+    for line in lines[x:y]:  
+         print(line.strip())
+
+script(53, 72)
+
+#OPTIONS
+
+running3 = True
+running4 = True
+
+option3 = input(' ')
+option4 = input(' ')
+
+while running3 == True:
+    if option3 == '1':
+        script(73, 86)
+        running3 = False
+        print('(PRESS ENTER TO CONTINUE...)')
+        script(105, 111)
+        if option4 == '1':
+            script(112, 121)
+            running4 = False
+        elif option4 == '2':
+            script(122, 131)
+            running4 = False
+        elif option4 == '3':
+            script(131, 140)
+            running4 = False
+        else:
+             print("This option is not viable. Please try again.")
+
+    elif option3 == '2':
+        script(99, 105)
+        running3 = False
+        input(' ')
+        print('R')
+        input(' ')
+        print('U')
+        input(' ')
+        print('N')
+        print('(PRESS ENTER TO CONTINUE...)')
+        input(' ')
+        script(141, 146)
+        
+    elif option3 == '3':
+        script(87, 99)
+        running3 = False
+        print('(PRESS ENTER TO CONTINUE...)')
+        input(' ')
+        print('The investigator helps you escape and defeat the spirit!')
+        print('-------------------------------------------------------')
+        print('YOU WIN!')
+         
+    else:
+        print("This option is not viable. Please try again.")
